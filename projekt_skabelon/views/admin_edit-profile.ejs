@@ -1,0 +1,23 @@
+<% include partials/admin_head.ejs %>
+<% include partials/admin_header.ejs %>
+<main role="main">
+    <% include partials/admin_nav.ejs %>
+    <section>
+        <form method="post" enctype="multipart/form-data">
+            <fieldset>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" value="<%= profile.name %>">
+            </fieldset>
+            <fieldset>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" value="<%= profile.email %>">
+            </fieldset>
+            <fieldset>
+                <label for="picture">Picture</label>
+                <input type="file" name="picture" id="picture" value="<%= profile.picture %>">
+            </fieldset>
+            <button type="submit">Update</button>
+        </form>
+    </section>
+</main>
+<% include partials/admin_footer.ejs %>

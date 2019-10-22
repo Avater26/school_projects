@@ -1,0 +1,38 @@
+<% include partials/admin_head.ejs %>
+<% include partials/admin_header.ejs %>
+<main role="main">
+    <% include partials/admin_nav.ejs %>
+    <section>
+        <a class="newData" href="/admin/user/new">Create a new user</a>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Rank</th>
+                <th>Edit</th>
+            </tr>
+            <% results.forEach(result => { %>
+            <tr>
+                <td>
+                    <%= result.id %>
+                </td>
+                <td>
+                    <%= result.username %>
+                </td>
+                <td>
+                    <%= result.role %>
+                </td>
+                <td>
+                    <div>
+                        <a href="/admin/user/edit/<%= result.id %>">
+                            <p>Edit</p><i class="fas fa-edit"></i>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <% }); %>
+        </table>
+    </section>
+</main>
+
+<% include partials/admin_footer.ejs %>

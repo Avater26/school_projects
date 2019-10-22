@@ -1,0 +1,38 @@
+<% include partials/head.ejs %>
+<form method="GET">
+    <fieldset>
+        <label for="name">Name</label>
+        <input type="search" name="name" id="name">
+    </fieldset>
+    <fieldset>
+        <label for="minPrice">Minimum Price</label>
+        <input type="number" name="minPrice" id="minPrice">
+    </fieldset>
+    <fieldset>
+        <label for="maxPrice">Maximum Price</label>
+        <input type="number" name="maxPrice" id="maxPrice">
+    </fieldset>
+    <fieldset>
+        <label for="category">Category</label>
+        <select name="category" id="category">
+            <% categories.forEach(category => { %>
+            <option value="<%= category.id %>">
+                <%= category.name %>
+            </option>
+            <% }); %>
+        </select>
+    </fieldset>
+
+    <button type="submit">Search</button>
+</form>
+<section>
+    <% results.forEach(result =>{%>
+    <div>
+        <a href="/product/<%= result.id %>"><%= result.name %></a>
+        <img src="../images/uploads/<%= result.path %>" alt="">
+        <p><%= result.category %></p>
+        <p><%= result.price %></p>
+    </div>
+    <%})%>
+</section>
+<% include partials/footer.ejs %>

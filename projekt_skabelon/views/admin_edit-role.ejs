@@ -1,0 +1,19 @@
+<% include partials/admin_head.ejs %>
+<% include partials/admin_header.ejs %>
+<main role="main">
+    <% include partials/admin_nav.ejs %>
+    <section>
+        <form method="post" enctype="multipart/form-data">
+            <fieldset>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" value="<%= user.name %>">
+            </fieldset>
+            <fieldset>
+                <label for="level">Level</label>
+                <input type="number" name="level" id="level" value="<%= user.level %>">
+            </fieldset>
+            <button type="submit">Update</button>
+        </form>
+    </section>
+</main>
+<% include partials/admin_footer.ejs %>

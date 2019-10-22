@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forside</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <img src="Logo/Event centrum logo-01.svg" alt="Event Centrum logo">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Forside</a>
+                </li>
+                <li>
+                    <a href="#">Fester</a>
+                </li>
+                <li>
+                    <a href="#">Firma events</a>
+                </li>
+                <li>
+                    <a href="#">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h3>Event Centrum skaber</h3>
+            <h2>DEN HELT</h2>
+            <h2>RIGTIGE STEMNING</h2>
+            <hr>
+            <p>...i jeres egne rammer (kantine, lager, parkeringskælder), udendørs (skov, strand) eller på hoteller & konferencesteder
+                overalt i Danmark.</p>
+            <a href="#">Læs mere</a>
+        </section>
+        <section id="heroslider">
+            <ul id="slides">
+                <li>
+                    <img src="event billeder/COLOURBOX2556345.jpg" alt="Et billed af en mand i en rustning">
+                    <div>
+                        <h1>Hvem er vi </h1>
+                        <p>Event Centrum har mange års erfaring med udvikling og afholdelse af både store og små arrangementer.</p>
+                        <p>Vi stræber efter at vores kunder kommer til at opleve glæde og motivation ved hjælp af ekstraordinære
+                            oplevelser. Vi vil med vores professionalisme og gode historier skabe grobund for at styrke relationer
+                            mellem ledelse og medarbejdere, virksomheden og kunderne.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="event billeder/COLOURBOX2002681.jpg" alt="Et billed af nogle snobrød der er ved at blive lavet over et bål">
+                    <div>
+                        <p>Enhver virksomhed er en unik sammensætning af mennesker, ressourcer og udfordringer. Vi afholder
+                            gerne et indledende og uforpligtende møde, så vi kan imødekomme jeres behov bedst muligt.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="event billeder/COLOURBOX5352344.jpg" alt="Et billed af noget mad">
+                    <div>
+                        <p>Hvad enten I har brug for en konference, teambuilding eller et seminar, finder vi en løsning, der
+                            sikrer at jeres arrangement bliver en succes.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="komp">
+            <div class="kompContainer">
+                <i class="fas fa-check"></i>
+                <div>
+                    <h4>Tilrettelagt</h4>
+                    <p>Event Centrum planlægger, koordinerer og afvikler begivenheder i alle størrelser</p>
+                </div>
+            </div>
+            <div class="kompContainer">
+                <i class="fas fa-trophy"></i>
+                <div>
+                    <h4>Professionelt</h4>
+                    <p>Event Centrum samarbejder udelukkende med professionelle leverandører</p>
+                </div>
+            </div>
+            <div class="kompContainer">
+                <i class="fas fa-random"></i>
+                <div>
+                    <h4>Flexibelt</h4>
+                    <p>Konference for 100 personer eller teambuilding for 12? Vi en løsning, der gør jeres arrangement til en
+                        succes.
+                    </p>
+                </div>
+            </div>
+            <div class="kompContainer">
+                <i class="fas fa-tachometer-alt"></i>
+                <div>
+                    <h4>Resultatskabende</h4>
+                    <p>Vi skaber grobund for styrkede relationer mellem ledelse og medarbejdere, virksomheden og kunderne</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h1>Kontakt os</h1>
+        <p>Vi stræber efter at vores kunder kommer til at opleve glæde og motivation ved hjælp af ekstraordinære oplevelser.
+            For en uforpligtende samtale om mulighederne i jeres arrangement.</p>
+        <section class="kontaktInfo">
+            <div class="kontaktContainer">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <p>Besøg os på</p>
+                    <p>Event Centrum, Hjørringvej 17, 4000 Roskilde</p>
+                </div>
+            </div>
+            <div class="kontaktContainer">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <p>Ring til os på </p>
+                    <p>+45 21346578</p>
+                </div>
+            </div>
+            <div class="kontaktContainer">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <p>Skriv til os på </p>
+                    <p>email@event-centrum.dk</p>
+                </div>
+            </div>
+        </section>
+        <form id="form">
+            <p>Send os et par linjer</p>
+            <input type="text" id="Navn" name="Navn" placeholder="Skriv dit navn">
+            <p id="fejlBeskedNavn" class="fejlBesked"></p>
+            <input type="text" id="Email" name="Email" placeholder="Skriv din email">
+            <p id="fejlBeskedEmail" class="fejlBesked"></p>
+            <textarea name="Besked" id="Besked" cols="30" rows="10" placeholder="Skriv din besked"></textarea>
+            <p id="fejlBeskedBesked" class="fejlBesked"></p>
+            <button type="submit">
+                <i class="fas fa-envelope"></i>Send</button>
+        </form>
+
+    </footer>
+    <script src="validator.js"></script>
+    <script src="slider.js"></script>
+</body>
+
+</html>

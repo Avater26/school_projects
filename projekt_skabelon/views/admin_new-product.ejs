@@ -1,0 +1,41 @@
+<% include partials/admin_head.ejs %>
+<% include partials/admin_header.ejs %>
+<main role="main">
+    <% include partials/admin_nav.ejs %>
+    <section>
+        <form method="post" enctype="multipart/form-data" id="signupForm">
+            <fieldset>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+            </fieldset>
+            <fieldset>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            </fieldset>
+            <fieldset>
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price">
+            </fieldset>
+            <fieldset>
+                <label for="weight">Weight</label>
+                <input type="number" name="weight" id="weight">
+            </fieldset>
+            <fieldset>
+                <label for="amount">Amount</label>
+                <input type="number" name="amount" id="amount">
+            </fieldset>
+            <fieldset>
+                <label for="category">Category</label>
+                <select name="category" id="category">
+                    <% categories.forEach(category => { %>
+                    <option value="<%= category.id %>">
+                        <%= category.name %>
+                    </option>
+                    <% }); %>
+                </select>
+            </fieldset>
+            <button type="submit">Create Product</button>
+        </form>
+    </section>
+</main>
+<% include partials/admin_footer.ejs %>

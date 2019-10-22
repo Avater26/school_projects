@@ -1,0 +1,13 @@
+<% include partials/head.ejs %>
+
+<div id="products">
+    <% results.forEach(result => {%>
+    <div class="random_product">
+        <h3><%= result.name %></h3>
+        <img src="../images/uploads/<%= result.path %>" alt="">
+        <p><%= result.price %>,- DKK</p>
+    </div>
+    <%})%>
+</div>
+
+<% include partials/footer.ejs %>

@@ -1,0 +1,18 @@
+<% include partials/head.ejs %>
+<% include partials/header.ejs %>
+<aside>
+    <% include partials/menu.ejs %>
+</aside>
+<main>
+    <img src="img/event_ver1.jpg" alt="">
+    <form action="" method="POST">
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_vJKbkbUCd5l8GTP0VHgfCxKU00YF1wkO1K" data-amount="20000" data-currency="dkk"
+            data-name="Stripe.com" data-description="Example charge"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto"
+            data-zip-code="true">
+        </script>
+    </form>
+    <p>Pris: 200 DKK</p>
+</main>
+<% include partials/footer.ejs %>

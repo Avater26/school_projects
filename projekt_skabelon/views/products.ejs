@@ -1,0 +1,51 @@
+<% include partials/head.ejs %>
+<h1>Products</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Picture</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Weight</th>
+            <th>Amount</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% results.forEach(result =>{%>
+        <tr>
+            <td><img src="../images/uploads/<%= result.path %>" alt=""></td>
+            <td><a href="/product/<%= result.id %>"><%= result.name %></a></td>
+            <td><%= result.price %></td>
+            <td><%= result.weight %></td>
+            <td><%= result.amount %></td>
+            <td><%= result.c_name %></td>
+        </tr>
+        <%})%>
+    </tbody>
+</table>
+<% if(typeof current_page != 'undefined' && typeof total_pages != 'undefined' ) { %>
+​
+<ul class="pagination">
+    ​
+    <!-- deaktiver tilbage linket hvis det er den første side der er aktiv -->
+    <li class="<%= (current_page > 1 ? '' : 'disabled') %>">
+        <a href="?page=<%= current_page -1 %>">&lt;</a>
+    </li>
+    ​
+    <!-- udskriv det antal links der er behov for, og fremhæv den nuværende side -->
+    <% for(let i = 0; i < total_pages; i++){%>
+    <li class="<%= (i+1) == current_page ? 'active': '' %>">
+        <a href="?page=<%= i+1 %>">side <%= i+1 %></a>
+    </li>
+    <% } %>
+    ​
+    <!--  deaktiver for det sidste link hvis det er den sidste side der vises -->
+    <li class="<%= (current_page < total_pages ? '' : 'disabled') %>">
+        <a href="?page=<%= current_page +1 %>">&gt;</a>
+    </li>
+    ​
+</ul>
+​
+<% } %>
+<% include partials/footer.ejs %>

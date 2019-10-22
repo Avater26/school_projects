@@ -1,0 +1,25 @@
+<% include partials/admin_head.ejs %>
+<% include partials/admin_header.ejs %>
+<main role="main">
+    <% include partials/admin_nav.ejs %>
+    <section>
+        <form method="post" enctype="multipart/form-data">
+            <fieldset>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" value="<%= user.username %>">
+            </fieldset>
+            <fieldset>
+                <label for="role">Role</label>
+                <select name="role" id="role">
+                    <% roles.forEach(role => { %>
+                    <option value="<%= role.id %>" <% if (user.fk_role==role.id ){%> selected <%} %>>
+                        <%= role.name %>
+                    </option>
+                    <% }); %>
+                </select>
+            </fieldset>
+            <button type="submit">Update</button>
+        </form>
+    </section>
+</main>
+<% include partials/admin_footer.ejs %>

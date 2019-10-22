@@ -1,0 +1,66 @@
+body {
+    display: grid;
+    grid-template-areas: 'select select''preview canvas';
+}
+
+.advancedForm {
+    display: flex;
+    grid-area: select;
+    flex-direction: column;
+    background-color: #c8dadf;
+    padding: 4em 2em;
+    outline: 2px dashed #92b0b3;
+    outline-offset: -1em;
+    text-align: center;
+    font-family: "comic sans ms", Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+
+.advancedForm input[type=file] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.advancedForm label {
+    color: #0f3c4b;
+    cursor: pointer;
+}
+
+.advancedForm label:hover strong {
+    color: #39bfd3;
+}
+
+.succMessage {
+    display: none;
+}
+
+.showMe {
+    display: block;
+}
+
+.previewImg {
+    grid-area: preview;
+    width: 590px;
+    height: auto;
+}
+
+.previewCon {
+    position: relative;
+
+}
+
+.divKnap {
+    background: black;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 100%;
+}
+
+.finalImage {
+    grid-area: canvas;
+}

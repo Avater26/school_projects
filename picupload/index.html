@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form enctype="multipart/form-data" class="fileUpload">
+        <label for="fileSelect"><strong>Click to select a picture</strong>
+            <br>
+            or drag a picture here
+        </label>
+        <input type="file" id="fileSelect" name="image">
+        <div class="succMessage">
+            <p>Upload done</p>
+        </div>
+    </form>
+
+    <div class="previewCon">
+        <img src="http://placehold.it/210x170?text=Preview%20Image" alt="placeholder" class="previewImg">
+    </div>
+    <canvas class="finalImage"></canvas>
+    <script src="main.js"></script>
+</body>
+
+</html>

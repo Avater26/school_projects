@@ -1,0 +1,52 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e6e6e6;
+}
+
+form {
+    width: 330px;
+    background-color: white;
+    padding: 2em 1em;
+    margin: auto;
+    text-align: center;
+}
+
+.inputGroup {
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 1em;
+}
+
+.inputGroup input {
+    margin-left: 20px;
+    direction: ltr;
+}
+
+.inputGroup label {
+    position: relative;
+}
+
+.inputGroup input[required]~label::after {
+    content: '*';
+    position: absolute;
+    right: -.5em;
+    color: #ff0000;
+}
+
+form button {
+    display: block;
+    width: 40%;
+    margin: auto;
+}
+
+form small {
+    color: #666;
+}
+
+.inputError {
+    border-color: #ff0000;
+}

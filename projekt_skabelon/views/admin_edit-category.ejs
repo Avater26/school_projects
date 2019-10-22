@@ -1,0 +1,19 @@
+<% include partials/admin_head.ejs %>
+<% include partials/admin_header.ejs %>
+<main role="main">
+    <% include partials/admin_nav.ejs %>
+    <section>
+        <form method="post" enctype="multipart/form-data">
+            <fieldset>
+                <label for="name">name</label>
+                <input type="text" name="name" id="name" value="<%= category.name %>">
+            </fieldset>
+            <fieldset>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" cols="30" rows="10"><%= category.description %></textarea>
+            </fieldset>
+            <button type="submit">Update</button>
+        </form>
+    </section>
+</main>
+<% include partials/admin_footer.ejs %>

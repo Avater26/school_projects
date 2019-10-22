@@ -1,0 +1,41 @@
+<% include partials/admin_head.ejs %>
+<% include partials/admin_header.ejs %>
+<main role="main">
+    <% include partials/admin_nav.ejs %>
+    <section>
+        <form method="post" enctype="multipart/form-data">
+            <fieldset>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" value="<%= product.name %>">
+            </fieldset>
+            <fieldset>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" cols="30" rows="10"><%= product.description %></textarea>
+            </fieldset>
+            <fieldset>
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price" value="<%= product.price %>">
+            </fieldset>
+            <fieldset>
+                <label for="weight">Weight</label>
+                <input type="number" name="weight" id="weight" value="<%= product.weight %>">
+            </fieldset>
+            <fieldset>
+                <label for="amount">Amount</label>
+                <input type="number" name="amount" id="amount" value="<%= product.amount %>">
+            </fieldset>
+            <fieldset>
+                <label for="category">Category</label>
+                <select name="category" id="category">
+                    <% categories.forEach(category => { %>
+                    <option value="<%= category.id %>" <% if (product.fk_category==category.id ){%> selected <%} %>>
+                        <%= category.name %>
+                    </option>
+                    <% }); %>
+                </select>
+            </fieldset>
+            <button type="submit">Update</button>
+        </form>
+    </section>
+</main>
+<% include partials/admin_footer.ejs %>
